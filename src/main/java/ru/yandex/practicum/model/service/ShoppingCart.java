@@ -29,7 +29,7 @@ public class ShoppingCart {
         double fullPrice = 0.0;
         for (Food food : shoppingCart) {
             if (food.getDiscount() > 0) {
-                fullPrice += (food.getPrice() * food.getAmount()) * (food.getDiscount() / 100);
+                fullPrice += (food.getPrice() * food.getAmount() / 100) * food.getDiscount();
             } else {
                 fullPrice += (food.getPrice() * food.getAmount());
             }

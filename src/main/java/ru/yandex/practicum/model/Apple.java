@@ -17,9 +17,6 @@ public class Apple extends Food {
 
     @Override
     public double getDiscount() {
-        if (this.colour.equals(RED)) {
-            return RED_APPLE_DISCOUNT;
-        }
-        return NO_DISCOUNT;
+        return this.colour.equals(RED) ? RED_APPLE_DISCOUNT : NO_DISCOUNT;
     }
 }
